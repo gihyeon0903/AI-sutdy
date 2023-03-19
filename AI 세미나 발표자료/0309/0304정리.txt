@@ -1,0 +1,39 @@
+링크 : https://hoya012.github.io/blog/anomaly-detection-overview-1/
+Supervised Anomaly Detection
+- 높은 정확도를 가지는 특징
+- sample을 다양하게 가져야함.
+
+Semi-supervised (One-Class) Anomaly Detection
+- 정상 sample만 있어도 학습이 가능함.
+- 상대적으로 양/불 판정 정확도가 떨어짐
+- 반드시 정상 sample에 대한 label을 확보해야함.
+
+Unsupervised Anomaly Detection
+- Labeling 과정이 필요하지 않다.
+- 양/불 판정 정확도가 높지 않고 hyper parameter에 매우 민감하다.
+
+비정상 sample에 대한 분류
+Novelty Detection		: 말티즈, 비숑으로 학습하였을 때, 진도개 Detection
+Outlier Detection		: 강아지로 학습하였을 때 사자 Detection
+
+링크 : https://github.com/hoya012/awesome-anomaly-detection
+- Image-level anomaly detection
+
+논문
+vae를 이용
+gan을 이용
+
+Reconstruction 방식
+- 정상 데이터의 분포를 학습하여 똑같이 재복원(Reconstruction)
+- 비정상 데이터를 입력으로 넣으면 제대로된 복원x
+- 이때 입력과 출력(reconst)과의 차이를 이용하여 이상치 탐지
+https://ffighting.tistory.com/entry/CAVGA-%ED%95%B5%EC%8B%AC-%EB%A6%AC%EB%B7%B0
+AE의 blurry한 특성을 줄임
+
+
+Classifcation 방식
+- 차원을 축소하여 정상데이터가 모여있는 부분에 Boundary
+
+Feature matching 방식
+- feature 추출
+- 중심(normal feature)과 얼마나 떨어져 있는지를 anomaly score로 반환
